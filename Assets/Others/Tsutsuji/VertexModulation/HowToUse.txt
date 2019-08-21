@@ -1,0 +1,22 @@
+【Vertex Modulation Shaderについて】
+オブジェクトの頂点にノイズテクスチャを流して法線方向に縮ませたり膨らませたりしてフワフワさせます
+ついでに周期的に色を点滅させたりします
+
+【ざっくりした使い方】
+Materialを作成しShaderからTsutsuji/VMod_Addを選択してください
+カラー、使用するノイズテクスチャを選択し、各パラメータを調整します
+
+【パラメータのこと】
+Outside Color:外側の色です
+Inside Color:内側の色です
+Outside Color Flash:点滅時の外側の色です
+Inside Color Flash:点滅時の内側の色です
+Noise Texture:流すノイズ画像です。細かいノイズほど頂点が激しく動きます
+Noise Scroll Speed:ノイズがメッシュ表面をスクロールするスピードです、0で完全に停止します
+Noise Rotate Speed:ノイズがメッシュ表面を円運動するスピードです、0で完全に停止します
+Noise Contrast:ノイズのコントラストを上げます、クッキリした動きになります
+Offset Inside:収縮方向の最大値です、0で元の位置、上げると内側への動きが大きくなります
+Offset Outside:膨張方向の最大値です、同上
+Rim Power:リムの色(Outside Color)の強さです
+Flash Speed:色の点滅速度です、0で完全に停止します
+Flash Power:点滅時のColor Flashのブレンド係数です、1で完全に変化し、0だと全く変化しません
