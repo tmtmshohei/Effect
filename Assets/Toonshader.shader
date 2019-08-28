@@ -6,6 +6,8 @@
 		_heighlight("HeighLight",Color) = (1,1,1,1)
 		_midlight("MidLight",Color) = (0.5,0.5,0.5,0.5)
 		_shadow("Shadow",Color) = (0.1,0.1,0.1,0.1)
+			_threshold("Threshold",Float) = 0.5
+			_brightness("Brightness",Float) = 1
 	}
 	SubShader
 	{
@@ -42,6 +44,8 @@
 			float4 _heighlight;
 			float4 _midlight;
 			float4 _shadow;
+			float _threshold;
+			float _brightness;
 			
 			v2f vert (appdata v)
 			{
@@ -54,11 +58,19 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
+				//i.uv.y -= _Time.y;
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
-				col.rgb = step(1, col.rgb);
+				fixed3 binari = step(_threshold, col.rgb);
+				
+				col.rgb = max(max(binari, _shadow),binari);//min(max(binari, _shadow),1.0);
+				//col.rgb = ;
+
+				
+				//col.rgb *= _brightness;
+			
 				// apply fog
-				if (col.r ==1)col = _heighlight;
+				//if (col.r >0.8)col = _heighlight;
 			
 			//else if (col.r > 0.7 && 0.3 > col.r) col = _midlight;
 			//else col = _shadow;

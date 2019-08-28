@@ -11,6 +11,7 @@
 		Tags { "RenderType"="Transparent" "Queue" = "Transparent" }
 		LOD 100
 		Blend SrcAlpha OneMinusSrcAlpha 
+			
 
 		Pass
 		{
@@ -64,9 +65,10 @@
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
 				col *= gradation;
-				//col *= xgradation;
-				// apply fog
-					col *= i.vcol*_color*_lightintensity;
+					//col *= xgradation;
+					// apply fog
+				col *= i.vcol*_color*_lightintensity;
+				//col *= i.vcol;
 				
 				UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;
