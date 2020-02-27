@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Unlit_windowOpenAnimation
+  m_Shader: {fileID: 4800000, guid: ee1f949c44d905542841d72cbfc1a8c3, type: 3}
+  m_ShaderKeywords: REVERSE_ON _DIRECTION_R2L
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 50baf1e753edbc6468a0920dfcf80824, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _backsurface:
+        m_Texture: {fileID: 2800000, guid: 8fa62d22e26dd6c4a9f5fe88fb653740, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _colsheet:
+        m_Texture: {fileID: 2800000, guid: 8c3540524909198409310c971def4ad1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _monosheet:
+        m_Texture: {fileID: 2800000, guid: 9e163b6bb4fb8fd43b36b99b7f25c2ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - REVERSE: 1
+    - _Direction: 0
+    - _REVERSE: 1
+    - _Reverse: 0
+    - _colum: 8
+    - _perFrame: 0.016
+    - _reverse: 0
+    - _row: 8
+    - _th: 0
+    - _uvoffset: 0.025
+    - reverse: 0
+    m_Colors: []

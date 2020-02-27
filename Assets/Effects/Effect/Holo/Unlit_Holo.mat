@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Unlit_Holo
+  m_Shader: {fileID: 4800000, guid: 93345824e5536324dbbc31160bd8bad9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Holoalpha:
+        m_Texture: {fileID: 2800000, guid: 54e8bcb673d10af41a51aa51372a08f7, type: 3}
+        m_Scale: {x: 1, y: 150.56}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _heighlight:
+        m_Texture: {fileID: 2800000, guid: 994de4e88e641554689f5b022f8dcf6f, type: 3}
+        m_Scale: {x: 0.015, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _F0: -0
+    - _colum: 4
+    - _hintensity: 0.81
+    - _intensity: 5.77
+    - _perFrame: 0.016
+    - _rimwidth: 10.1
+    - _rintensity: 114.5
+    - _row: 4
+    - _th: 0
+    m_Colors:
+    - _Color: {r: 1, g: 0.7905534, b: 0, a: 1}
+    - _heighcolor: {r: 0.972549, g: 0.4702875, b: 0, a: 1}
+    - _rimcolor: {r: 0.83137256, g: 0.44005352, b: 0.30196077, a: 1}
