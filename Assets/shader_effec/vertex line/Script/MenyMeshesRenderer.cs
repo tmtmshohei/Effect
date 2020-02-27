@@ -26,6 +26,6 @@ public class MenyMeshesRenderer : MonoBehaviour {
 		material.SetPass(0);
  
 		// 1万個のオブジェクトをレンダリング
-		Graphics.DrawProcedural(MeshTopology.Points, 100);
+		Graphics.DrawProceduralNow(MeshTopology.Points, 100);
 	}
 }
