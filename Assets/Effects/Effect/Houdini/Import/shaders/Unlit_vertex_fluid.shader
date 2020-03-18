@@ -3,6 +3,8 @@
 	Properties
 	{
 		_Color ("Color", Color) = (1,1,1,1)
+		_hColor ("hColor", Color) = (1,1,1,1)
+		_alpha("Alpha",Range(0,1)) = 1
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_boundingMax("Bounding Max", Float) = 1.0
 		_boundingMin("Bounding Min", Float) = 1.0
@@ -80,6 +82,8 @@
 			float4 _MainTex_ST;
 			float4 _Color;
 			float _inputtime;
+			float4 _hColor;
+			float  _alpha;
 
 
 			void vert_vat(inout appdata v){
@@ -142,9 +146,10 @@
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				half3 lightDir = normalize(UnityWorldSpaceLightDir(worldPos));
+				float3 fakelight = float3(0.3,0,0.3);
 
 				o.normal = v.normal;
-				//o.normal = dot(o.normal,lightDir);
+				o.normal = dot(o.normal,fakelight);
 				
 				//UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
@@ -154,10 +159,14 @@
 			{
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv)*_Color;
+				col.rgb = col.rgb * i.normal;
+				float4 hcol = _hColor;
+				hcol.rgb  =hcol.rgb * (1-i.normal);
+				col.rgb += hcol.rgb;
+				col.a = _alpha;
+				return col;
 				fixed4 glow  = tex2D(_glow,i.uv)*6;
-				col.rgb *= i.color.rgb;
-				col.rgb *= length(i.normal);
-				//col += glow;
+				
 				// apply fog
 				//UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;
