@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Custom_NormalMapping
+  m_Shader: {fileID: 4800000, guid: c86e5f11a14650f4e9d742158ec6fd23, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0.05, y: 0.05}
+        m_Offset: {x: 0.29, y: -0.42}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: c282daa55c9a38f45a74fc36b448a0fb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _heighlight:
+        m_Texture: {fileID: 2800000, guid: d84f8e3b362d73342a384c7224b233aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _test:
+        m_Texture: {fileID: 2800000, guid: 33cf2a327889b254d95bcc87fa7e97e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _F0: 0.63
+    - _Shininess: 0.04
+    - _colum: 4
+    - _heiglightintensity: 0.82
+    - _perFrame: 0.1
+    - _row: 4
+    - _seed: 0.75
+    m_Colors:
+    - _color: {r: 0.05206479, g: 0.13807096, b: 0.16981131, a: 0.5647059}
