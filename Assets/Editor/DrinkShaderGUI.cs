@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class ShaderGUItest : ShaderGUI {
+public class DrinkShaderGUI : ShaderGUI {
 
     public enum BlendMode
     {
         Opaque,                 // 不透明
         Transparent,            // 半透明
-        Additive,               // 加算
-        AdditiveTransparent,    // 加算半透明
+        //Additive,               // 加算
+        //AdditiveTransparent,    // 加算半透明
     }
     private MaterialProperty blendProp, cullProp, ztestProp, snapProp;
 

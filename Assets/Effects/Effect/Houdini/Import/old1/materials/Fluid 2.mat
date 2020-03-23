@@ -20,15 +20,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fluid 1
+  m_Name: Fluid 2
   m_Shader: {fileID: 4800000, guid: 667a27af2b54df142a89f15ee7e26394, type: 3}
   m_ShaderKeywords: _OVERLAY_GEOMETRY _ZWRITE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     MotionVector: User
+    RenderType: Opaque
   disabledShaderPasses:
   - TransparentBackface
   - MOTIONVECTORS
@@ -190,7 +191,7 @@ Material:
     - _DistortionVectorScale: 2
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 1
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
@@ -237,7 +238,7 @@ Material:
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularOcclusionMode: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _StencilRef: 2
     - _StencilRefDepth: 0
     - _StencilRefDistortionVec: 64
@@ -275,7 +276,8 @@ Material:
     - _alpha: 1
     - _boundingMax: 1.3
     - _boundingMin: -2.48
-    - _inputtime: 0.04
+    - _inputtime: 0.044
+    - _inputtime_offset: 0
     - _numOfFrames: 63
     - _pack_normal: 0
     - _speed: 0.2
@@ -296,4 +298,4 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _hColor: {r: 0.8773585, g: 0.8677426, b: 0.5504183, a: 1}
+    - _hColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}

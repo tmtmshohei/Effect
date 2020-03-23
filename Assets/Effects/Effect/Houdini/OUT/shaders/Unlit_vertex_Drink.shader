@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Unlit_vertex_fluid"
+﻿Shader "Unlit/Unlit_vertex_Drink"
 {
 	Properties
 	{
@@ -6,11 +6,10 @@
 		_Color ("Color", Color) = (1,1,1,1)
 		_hColor ("hColor", Color) = (1,1,1,1)
 		_alpha("Alpha",Range(0,1)) = 1
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_boundingMax("Bounding Max", Float) = 1.0
-		_boundingMin("Bounding Min", Float) = 1.0
+		//_MainTex ("Albedo (RGB)", 2D) = "white" {}
+		[HideInInspector]_boundingMax("Bounding Max", Float) = 1.0
+		[HideInInspector]_boundingMin("Bounding Min", Float) = 1.0
 		_numOfFrames("Number Of Frames", int) = 240
-		_speed("Speed", Float) = 0.33
 		[MaterialToggle] _pack_normal ("Pack Normal", Float) = 0
 		_posTex ("Position Map (RGB)", 2D) = "white" {}
 		_nTex ("Normal Map (RGB)", 2D) = "grey" {}
@@ -29,6 +28,7 @@
 			[Enum(UnityEngine.Rendering.CullMode)]_Cullingmode("Cullingmode",Float) = 2
 			[KeywordEnum(Off, On)] _ZWrite("ZWrite",Float) = 1
 			[Toggle]_AUTOANIMATION("AutoAnimation",Float) = 0
+			_speed("AutoSpeed", Float) = 0.33
 
 	}
 	SubShader
@@ -90,7 +90,7 @@
 
 			void vert_vat(inout appdata v){
 			//calculate uv coordinates
-			_inputtime = smoothstep(_inputtime_offset,1,_inputtime);
+			_inputtime = smoothstep(_inputtime_offset,1,_inputtime);//アニメーションのスタート位置がずれることがあるので、オフセット可能なように
 			#ifdef _AUTOANIMATION_ON
 				float timeInFrames = ((ceil(frac(-_Time.y * _speed) * _numOfFrames))/_numOfFrames) + (1.0/_numOfFrames);
 			#else
@@ -163,9 +163,6 @@
 				hcol.rgb  =hcol.rgb * (1-i.normal);
 				col.rgb += hcol.rgb;
 				col.a = _alpha;
-				return col;
-				
-				
 				// apply fog
 				//UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;
@@ -173,5 +170,5 @@
 			ENDCG
 		}
 	}
-	CustomEditor "ShaderGUItest"
+	CustomEditor "DrinkShaderGUI"
 }
