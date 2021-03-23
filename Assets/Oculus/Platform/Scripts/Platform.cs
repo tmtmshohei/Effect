@@ -1630,6 +1630,31 @@ namespace Oculus.Platform
 
   }
 
+  public static partial class NetSync
+  {
+    /// Sent when the status of a connection has changed.
+    ///
+    public static void SetConnectionStatusChangedNotificationCallback(Message<Models.NetSyncConnection>.Callback callback)
+    {
+      Callback.SetNotificationCallback(
+        Message.MessageType.Notification_NetSync_ConnectionStatusChanged,
+        callback
+      );
+    }
+    
+    /// Sent when the list of known connected sessions has changed. Contains the
+    /// new list of sessions.
+    ///
+    public static void SetSessionsChangedNotificationCallback(Message<Models.NetSyncSessionsChangedNotification>.Callback callback)
+    {
+      Callback.SetNotificationCallback(
+        Message.MessageType.Notification_NetSync_SessionsChanged,
+        callback
+      );
+    }
+    
+  }
+
   public static partial class Net
   {
     /// Indicates that a connection has been established or there's been an error.
@@ -1735,6 +1760,18 @@ namespace Oculus.Platform
       if (Core.IsInitialized())
       {
         return new Request(CAPI.ovr_RichPresence_Clear());
+      }
+
+      return null;
+    }
+
+    /// Gets all the destinations that the presence can be set to
+    ///
+    public static Request<Models.DestinationList> GetDestinations()
+    {
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.DestinationList>(CAPI.ovr_RichPresence_GetDestinations());
       }
 
       return null;
@@ -2482,6 +2519,29 @@ namespace Oculus.Platform
           CAPI.ovr_HTTP_GetWithMessageType(
             list.NextUrl,
             (int)Message.MessageType.Notification_GetNextRoomInviteNotificationArrayPage
+          )
+        );
+      }
+
+      return null;
+    }
+
+  }
+
+  public static partial class RichPresence {
+    public static Request<Models.DestinationList> GetNextDestinationListPage(Models.DestinationList list) {
+      if (!list.HasNextPage)
+      {
+        Debug.LogWarning("Oculus.Platform.GetNextDestinationListPage: List has no next page");
+        return null;
+      }
+
+      if (Core.IsInitialized())
+      {
+        return new Request<Models.DestinationList>(
+          CAPI.ovr_HTTP_GetWithMessageType(
+            list.NextUrl,
+            (int)Message.MessageType.RichPresence_GetNextDestinationArrayPage
           )
         );
       }

@@ -21,7 +21,7 @@ Material:
     m_TexEnvs:
     - _Holoalpha:
         m_Texture: {fileID: 2800000, guid: 54e8bcb673d10af41a51aa51372a08f7, type: 3}
-        m_Scale: {x: 1, y: 150.56}
+        m_Scale: {x: 1, y: 30}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -31,17 +31,32 @@ Material:
         m_Texture: {fileID: 2800000, guid: 994de4e88e641554689f5b022f8dcf6f, type: 3}
         m_Scale: {x: 0.015, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _hnoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _hololine:
+        m_Texture: {fileID: 2800000, guid: 54e8bcb673d10af41a51aa51372a08f7, type: 3}
+        m_Scale: {x: 1, y: 2.48}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _F0: -0
+    - _F0: 0.12
+    - _USENOISE: 0
     - _colum: 4
-    - _hintensity: 0.81
+    - _hintensity: 2.8
+    - _inerintensity: 1
     - _intensity: 5.77
-    - _perFrame: 0.016
-    - _rimwidth: 10.1
-    - _rintensity: 114.5
+    - _noiseintensity: 3.97
+    - _perFrame: -0.09
+    - _reflimit: 1
+    - _repetition: 5
+    - _rimwidth: 4.31
+    - _rintensity: 1.85
     - _row: 4
     - _th: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.7905534, b: 0, a: 1}
-    - _heighcolor: {r: 0.972549, g: 0.4702875, b: 0, a: 1}
-    - _rimcolor: {r: 0.83137256, g: 0.44005352, b: 0.30196077, a: 1}
+    - _Color: {r: 0, g: 0.8043575, b: 1, a: 1}
+    - _heighcolor: {r: 0, g: 0.35950914, b: 0.972549, a: 1}
+    - _innercolor: {r: 1, g: 1, b: 1, a: 0}
+    - _noisecolor: {r: 1, g: 0.7193926, b: 0.0047169924, a: 1}
+    - _rimcolor: {r: 0, g: 0.35284162, b: 0.8117647, a: 1}

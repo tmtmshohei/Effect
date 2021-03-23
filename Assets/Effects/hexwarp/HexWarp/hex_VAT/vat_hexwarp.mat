@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: vat_hexwarp
   m_Shader: {fileID: 4800000, guid: 3832402dff2ccee4cb8e556e2a0f7dbc, type: 3}
   m_ShaderKeywords: _OVERLAY_GEOMETRY _ZWRITE_ON

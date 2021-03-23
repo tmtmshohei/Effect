@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Item_Drink
   m_Shader: {fileID: 4800000, guid: 3fa16993ffb14ff4cb1b693236a2fe76, type: 3}
-  m_ShaderKeywords: _OVERLAY_GEOMETRY _OVERLAY_OPAQUE _ZWRITE_ON
+  m_ShaderKeywords: _AUTOANIMATION_ON _OVERLAY_GEOMETRY _OVERLAY_OPAQUE _ZWRITE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -133,18 +133,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _nTex:
-        m_Texture: {fileID: 2800000, guid: c9b9068cd68cb4e42b6c3dbd9df5da88, type: 3}
+        m_Texture: {fileID: 2800000, guid: 286b12f47e6c16e4b8ed574c66050d30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _posTex:
-        m_Texture: {fileID: 2800000, guid: 7f36616d4b34c074094c465b5349c782, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8e52130c325d52749a9684947f47b3d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
-    - _AUTOANIMATION: 0
+    - _AUTOANIMATION: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
     - _AlphaCutoff: 0.5
@@ -274,9 +274,9 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     - _alpha: 1
-    - _boundingMax: 1.3010229
-    - _boundingMin: -2.486777
-    - _inputtime: 0
+    - _boundingMax: 1.5
+    - _boundingMin: -2.41
+    - _inputtime: 0.888
     - _inputtime_offset: -0.1
     - _numOfFrames: 64
     - _pack_normal: 0
@@ -284,7 +284,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.11372546, g: 0.8986443, b: 0.90588236, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.4056604, g: 0.2888007, b: 0.2238786, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -298,4 +298,4 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _hColor: {r: 0.8773585, g: 0.8677426, b: 0.5504183, a: 1}
+    - _hColor: {r: 0.31132078, g: 0.13060269, b: 0.083704166, a: 1}

@@ -8,14 +8,15 @@
         _intensity("intensity",Float)=1
         [Toggle]_TextureAnimation8("Use Texture Animation",Int)=0
         _perFrame("フレーム間隔",Float) = 0.03
-		_row("行",Int) = 4
-		_colum("列",Int) = 4
-		_F0("F0",Range(0,1))=0
+        _row("行",Int) = 4
+        _colum("列",Int) = 4
+        _F0("F0",Range(0,1))=0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque"  }
         LOD 100
+        //Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
         {
@@ -35,16 +36,17 @@
             float _intensity;
 
             float _perFrame;
-			int _row;
-			int _colum;
-			float _F0;
+            int _row;
+            int _colum;
+            float _F0;
 
             float4 hoge(sampler2D tex ,float2 uv, int index, float dx, float dy)
-			{
-				float2 nuv = float2(uv.x*dx + fmod(index,_row)*dx , 1-(uv.y*dy+(index/_colum)*dy	));
-				float4 col = tex2D(tex,nuv);
-				return col;
-			}
+            {
+                float uvy = 1-uv.y;
+                float2 nuv = float2(uv.x*dx + fmod(index,_row)*dx , 1-(uvy*dy+(index/_colum)*dy	));
+                float4 col = tex2D(tex,nuv);
+                return col;
+            }
 
             struct appdata
             {
@@ -78,16 +80,17 @@
             {
 
                 int totalframe = _row*_colum;
-				float current = fmod(_Time.y/_perFrame,totalframe);
-				int index = floor(current);
-				float dx = 1.0/_row;
-				float dy = 1.0/_colum;
+                float current = fmod(_Time.y/_perFrame,totalframe);
+                int index = floor(current);
+                float dx = 1.0/_row;
+                float dy = 1.0/_colum;
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
                 //float4 text = tex2D(_text,i.textuv);
                 //col *= text*_color*_intensity;
 
-                col *= hoge(_text,i.textuv,index,dx,dy)*_intensity;
+                col.rgb *= hoge(_text,i.textuv,index,dx,dy)*_intensity;
+                //col += hoge(_text,i.textuv,index,dx,dy)*_intensity;
                 
                 
 

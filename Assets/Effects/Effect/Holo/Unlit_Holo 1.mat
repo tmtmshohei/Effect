@@ -20,28 +20,42 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Holoalpha:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 150.56}
+        m_Texture: {fileID: 2800000, guid: ae7caea19434a77488034afd730783e0, type: 3}
+        m_Scale: {x: 1, y: 50}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _heighlight:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 0.015, y: 1}
+        m_Texture: {fileID: 2800000, guid: 994de4e88e641554689f5b022f8dcf6f, type: 3}
+        m_Scale: {x: 0.001, y: 0.1}
+        m_Offset: {x: 0, y: 0}
+    - _hnoise:
+        m_Texture: {fileID: 2800000, guid: 4b1880a5978c2b54ebdf9a22c6f2cabf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _hololine:
+        m_Texture: {fileID: 2800000, guid: ae7caea19434a77488034afd730783e0, type: 3}
+        m_Scale: {x: 1, y: 30}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _F0: 0.55
+    - _F0: 0.127
+    - _USENOISE: 0
     - _colum: 4
-    - _hintensity: 0.81
+    - _hintensity: 0.86
+    - _inerintensity: 1.37
     - _intensity: 5.77
+    - _noiseintensity: 1
     - _perFrame: 0.016
-    - _rimwidth: 4.77
-    - _rintensity: 1.87
+    - _reflimit: 1.38
+    - _repetition: 2.59
+    - _rimwidth: 5
+    - _rintensity: 1
     - _row: 4
     - _th: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.32661325, b: 0, a: 1}
-    - _heighcolor: {r: 1, g: 1, b: 1, a: 1}
-    - _rimcolor: {r: 0.9481132, g: 1, b: 0.99286556, a: 1}
+    - _Color: {r: 1, g: 0.41137177, b: 0, a: 1}
+    - _heighcolor: {r: 1, g: 0.23297286, b: 0, a: 1}
+    - _noisecolor: {r: 1, g: 0, b: 0.6748452, a: 1}
+    - _rimcolor: {r: 0, g: 0.8251438, b: 0.98039216, a: 1}

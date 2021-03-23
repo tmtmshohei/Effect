@@ -12,13 +12,16 @@
         _upoffset("upoffset",Range(0,0.2)) = 0.06
         _downoffset("downoffset",Range(0,0.2)) = 0.1
         _intensity("Intensity",Float) = 3.5
-        
-
     }
+    
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        //Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent"  "Queue" = "Transparent-2" }
         LOD 100
+        Blend One OneMinusSrcAlpha
+        Zwrite off
+        // Ztest off
 
         Pass
         {
@@ -55,6 +58,7 @@
             float _downoffset;
             float _upoffset;
             float _intensity;
+            float _Strength;
 
             v2f vert (appdata v)
             {

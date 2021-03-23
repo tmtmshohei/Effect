@@ -5,10 +5,12 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Unlit_sheetanimation
-  m_Shader: {fileID: 4800000, guid: 8ad9acacc29c23241adde2770cb6a8fe, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 51423be2c35c2a149aa1cc74866109cd, type: 3}
+  m_ShaderKeywords: _BILLBOARD_Y_AXIS _FIX_Y_ON _LOOKINGCAMERA_ON _OVERLAY_TRANSPARENT
+    _ZWRITE_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -23,16 +25,27 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3c0c72f897553de45a84fca31fee9e6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: a8ef41279296740e181de007aaa8c1d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BILLBOARD: 2
     - _Cols: 8
+    - _Cullingmode: 0
+    - _Cutoff: 0.5
+    - _DstBlend: 0
     - _Fix_X: 0
-    - _Fix_Y: 0
+    - _Fix_Y: 1
     - _Frame: 0.02
+    - _LOOKINGCAMERA: 1
+    - _Overlay: 1
     - _Rows: 8
+    - _SrcBlend: 1
+    - _ZWrite: 0
     - _rox: 1
+    - _scalex: 1
+    - _scaley: 1
+    - _seed: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Scale: {r: 1, g: -1, b: 1, a: 1.61}

@@ -7,8 +7,8 @@
 		_hColor ("hColor", Color) = (1,1,1,1)
 		_alpha("Alpha",Range(0,1)) = 1
 		//_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		[HideInInspector]_boundingMax("Bounding Max", Float) = 1.0
-		[HideInInspector]_boundingMin("Bounding Min", Float) = 1.0
+		_boundingMax("Bounding Max", Float) = 1.0
+		_boundingMin("Bounding Min", Float) = 1.0
 		_numOfFrames("Number Of Frames", int) = 240
 		[MaterialToggle] _pack_normal ("Pack Normal", Float) = 0
 		_posTex ("Position Map (RGB)", 2D) = "white" {}
@@ -157,7 +157,7 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
-				fixed4 col = fixed4(1,1,1,1);//tex2D(_MainTex, i.uv)*_Color;
+				fixed4 col = _Color;//fixed4(1,1,1,1);//tex2D(_MainTex, i.uv)*_Color;
 				col.rgb = col.rgb * i.normal;
 				float4 hcol = _hColor;
 				hcol.rgb  =hcol.rgb * (1-i.normal);

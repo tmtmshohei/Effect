@@ -5,14 +5,15 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Misaki_SchoolUniform
-  m_Shader: {fileID: 4800000, guid: abaf2020b803b6847b5c081ed22c05c5, type: 3}
+  m_Shader: {fileID: 4800000, guid: c7499c5825130a04e8ae7b7bbfdf0c46, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -81,6 +82,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EdgeThickness: 1
+    - _Glosiness: 128
     - _Glossiness: 0.5
     - _Metallic: 0
     - _Mode: 0
@@ -91,6 +93,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
+    - _AmbientColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.2051795, g: 0.20853864, b: 0.24264705, a: 1}
     - _ShadowColor: {r: 0.8, g: 0.8, b: 1, a: 1}
+    - _SpecularColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}

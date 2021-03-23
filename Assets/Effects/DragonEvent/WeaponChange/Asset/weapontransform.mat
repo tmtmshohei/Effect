@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: weapontransform
   m_Shader: {fileID: 4800000, guid: 24d6e7d85e532c048bed588364f3d361, type: 3}
   m_ShaderKeywords: 
@@ -85,7 +86,7 @@ Material:
     - _ZWrite: 1
     - _boundingMax: 5.79
     - _boundingMin: -3.97
-    - _inputtime: 1
+    - _inputtime: 0.1
     - _light: 8
     - _numOfFrames: 79
     - _pack_normal: 0

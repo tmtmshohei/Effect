@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Unlit_HoloMap
+  m_Shader: {fileID: 4800000, guid: 93345824e5536324dbbc31160bd8bad9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Holoalpha:
+        m_Texture: {fileID: 2800000, guid: 54e8bcb673d10af41a51aa51372a08f7, type: 3}
+        m_Scale: {x: 1, y: 30}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _heighlight:
+        m_Texture: {fileID: 2800000, guid: 994de4e88e641554689f5b022f8dcf6f, type: 3}
+        m_Scale: {x: 0.015, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _hnoise:
+        m_Texture: {fileID: 2800000, guid: 994de4e88e641554689f5b022f8dcf6f, type: 3}
+        m_Scale: {x: 100, y: 100}
+        m_Offset: {x: 0, y: 0}
+    - _hololine:
+        m_Texture: {fileID: 2800000, guid: 54e8bcb673d10af41a51aa51372a08f7, type: 3}
+        m_Scale: {x: 1, y: 14.41}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _F0: 0.253
+    - _USENOISE: 0
+    - _colum: 4
+    - _hintensity: 2.8
+    - _inerintensity: 0.6
+    - _intensity: 5.77
+    - _noiseintensity: 3.36
+    - _perFrame: -0.09
+    - _reflimit: 1.89
+    - _repetition: 6.99
+    - _rimwidth: 4.31
+    - _rintensity: 1.85
+    - _row: 4
+    - _th: 0
+    m_Colors:
+    - _Color: {r: 0, g: 0.8039217, b: 1, a: 1}
+    - _heighcolor: {r: 0, g: 0.35950914, b: 0.972549, a: 1}
+    - _innercolor: {r: 0, g: 0, b: 0, a: 1}
+    - _noisecolor: {r: 0.8962264, g: 0.57244253, b: 0, a: 1}
+    - _rimcolor: {r: 0, g: 0.35284162, b: 0.8117647, a: 1}

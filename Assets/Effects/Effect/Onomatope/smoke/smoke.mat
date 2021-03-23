@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: smoke
-  m_Shader: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 51423be2c35c2a149aa1cc74866109cd, type: 3}
+  m_ShaderKeywords: _BILLBOARD_Y_AXIS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -60,6 +60,7 @@ Material:
         m_Scale: {x: 1, y: -1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BILLBOARD: 2
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
