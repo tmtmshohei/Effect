@@ -20,19 +20,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b671e916c03cadd41ab8c219761d636c, type: 3}
-        m_Scale: {x: 8, y: 8}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _text:
-        m_Texture: {fileID: 2800000, guid: ddf149ba061f25d4cb1b09f55fd71f24, type: 3}
-        m_Scale: {x: 1, y: -1}
+        m_Texture: {fileID: 2800000, guid: 241d261d8ee968a478215126b17f6300, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _F0: 0
     - _TextureAnimation8: 0
-    - _colum: 8
-    - _intensity: 24.3
-    - _perFrame: 0.05
-    - _row: 8
+    - _colum: 4
+    - _intensity: 1
+    - _perFrame: 0.0165
+    - _row: 4
     m_Colors:
-    - _color: {r: 1, g: 0.45740873, b: 0, a: 1}
+    - _color: {r: 1, g: 1, b: 1, a: 1}
