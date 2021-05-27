@@ -23,6 +23,43 @@
 
             #include "UnityCG.cginc"
 
+
+            
+			float rand(float2 co) 
+			{
+				return frac(sin(dot(co.xy, float2(12.9898, 78.233))) * 43758.5453);
+			}
+
+			float Posterize(float In, float Steps)
+			{
+				return floor(In / (1 / Steps)) * (1 / Steps);
+			}
+
+			float Glith(float2 uv)
+			{
+				float x = 0.5;
+				float y = Posterize((rand(float2(fmod(_Time.y,10),6))),300);
+				float mulseed = sin(Posterize(_Time.y, 2) * 10);
+
+				float stepy = step(y + 0.2,uv.y);
+				float stepy2 = step(y,uv.y);
+				float stepy3 = step(y + 0.3, uv.y);
+				float stepy4 = step(y, uv.y);
+
+				float stepx = step(x + 0.2, uv.x);
+				float stepx2 = step(x, uv.x);
+
+
+				float stepxsubst = (stepx*mulseed) - (stepx2*mulseed);
+				float stepysubst = (stepy*mulseed) - (stepy2*mulseed);
+				float stepysubst2 = (stepy3*mulseed) - (stepy4*mulseed);
+				stepysubst = lerp(stepysubst, stepysubst2, fmod(_Time.y,100));
+
+
+				return uv.x += stepysubst;
+				//return float2(uv.x, 0);
+			}
+
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -61,6 +98,9 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
+                i.uv.x = Glith(i.uv);
+                i.uv2.x = Glith(i.uv2);
+                i.uv3.x = Glith(i.uv3);
                 float2 uv = i.uv;
                 float2 uv2 = i.uv2;
                 float2 uv3 = i.uv3;

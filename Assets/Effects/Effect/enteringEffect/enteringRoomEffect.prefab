@@ -48374,7 +48374,7 @@ GameObject:
   - component: {fileID: 1740914199899927341}
   - component: {fileID: 6582035295102509995}
   m_Layer: 0
-  m_Name: avatarEffect
+  m_Name: enteringRoomEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
